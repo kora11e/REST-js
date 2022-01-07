@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+             table, td, th {  
+     border: 5px solid #ddd;
+     text-align: left;
+   }
+   
+   table {
+     border-collapse: collapse;
+     width: 50%;
+    
+   }
+   .table-data{
+       position: relative;
+     left:50px;
+     top:50px;
+   }
+   th, td {
+     padding: 15px;
+   }
+    </style>
+        <div class="table-data">
+            <table border="3" >
+                <tr>
+                    <th>Indeks</th>
+                    <th>title</th>
+                    <th>author</th>
+                </tr>
+                
+                <%
+                if(userData.length!=0){
+                var i=1;
+                userData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%=i; %></td>
+                    <td><%=data.title %></td>
+                    <td><%=data.author %></td>
+                </tr>
+                <%  i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                <% } %>
+            </table>
+            </div>
+</body>
+</html>

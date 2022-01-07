@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D page</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+    <noscript>Odblokuj JavaScript</noscript>
+    <h1>Witaj w aplikacji testowej!</h1>
+    <div style="display: flex; flex-direction: column;">
+        <form action="/" method="post" style="display: flex; flex-direction: column;" draggable="false">
+            <input type="text" name="title" placeholder="tytuł książki" required>
+            <input type="text" name="author" placeholder="autor" required>
+            <button type="submit">OK!</button>
+        </form>
+            <a href="/data"><button id="show">Pokaż dane</button></a>
+    </div>
+    <p id="EmptyParagraph"></p>
+    <script src="../application.js" defer></script>
+    <style>
+        form input {
+            margin-top: 15px;
+        }
+        button {
+            margin-top: 15px;
+        }
+    </style>
+</body>
+</html>

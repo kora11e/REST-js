@@ -1,0 +1,112 @@
+:root {
+    --purpler: rgb(143, 68, 230);
+    --blacker: rgba(0, 0, 0, 0.877);
+}
+* {
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    overflow-x: hidden;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--blacker);
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.877);
+    height: 90vh;
+    width: 20vw;
+}
+nav p {
+    transform: rotateZ(-90deg);
+    position: absolute;
+    top: 49vh;
+    left: -4.5vw;
+    letter-spacing: 3px;
+    color: var(--purpler);
+}
+nav p span {
+    color: rgb(255, 115, 0);
+}
+#flex {
+    display: flex;
+    margin: 30px;
+    align-items: center;
+}
+#flex > main, nav {
+    margin: 50px;
+}
+main {
+    position: relative;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    overflow: hidden;
+}
+.boxes {
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    margin: 20px;
+    /*transform: perspective(50px) rotateY(-45deg); po lewej widnieje kod którego wykonaie daje niezwykle unikatowy efekt*/
+    transform: perspective(400px) rotateY(-45deg);
+    perspective-origin: 25% 50%;
+    transition-duration: 300ms;
+}
+.boxes:hover {
+    color: violet;
+    text-shadow: 0 0 5px violet;
+    transform: perspective(400px) rotateY(30deg);
+}
+.boxes:after {
+    top: 35%;
+    right: 0%;
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 2px;
+    height: 50%;
+    box-shadow: 0 0 5px white;
+}
+.boxes:before {
+    top: 30%;
+    left: 0%;
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 2px;
+    height: 50%;
+    box-shadow: 0 0 5px white;
+}
+#circle {
+    position: absolute;
+    top: -10vh;
+    right: -5vw;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    background-color: cyan;
+    transition-duration: 1s;
+    transition-delay: 0.02s;
+}
+#circle:hover {
+    height: 250px;
+    width: 250px;
+}
+::-webkit-scrollbar {
+    width: 0.8vw;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: var(--blacker);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(247, 146, 52);
+    border-radius: 70px;
+    border: 3px var(--blacker) solid;
+}
